@@ -9,11 +9,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [2.0.5]
 
-### Uncategorized
+### Fixed
 
 - refactor: simplify Semgrep action by removing unnecessary file copy step
 - fix: update .semgrepignore to include .security-scanner directory
-- fix linting issues
+
+### Added
+
 - feat: add rule to catch npx usage in JS/TS/YAML
 
 ## [2.0.2]
