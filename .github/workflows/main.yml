@@ -63,7 +63,7 @@ jobs:
 
   is-release:
     name: Determine whether this is a release merge commit
-    needs: lint-build-test
+    needs: all-jobs-pass
     if: github.event_name == 'push'
     runs-on: ubuntu-latest
     outputs:
@@ -71,8 +71,6 @@ jobs:
     steps:
       - id: is-release
         uses: MetaMask/action-is-release@v2
-        with:
-          commit-starts-with: 'Release [version],Release v[version],Release/[version],Release/v[version],Release `[version]`'
 
   publish-release:
     needs: is-release
